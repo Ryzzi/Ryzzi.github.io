@@ -7,22 +7,8 @@
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <copyright>juzi</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://Ryzzi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Syntax</title>
-      <link>https://Ryzzi.github.io/categories/syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://Ryzzi.github.io/categories/syntax/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Themes</title>
-      <link>https://Ryzzi.github.io/categories/themes/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://Ryzzi.github.io/categories/themes/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Test</title>
       <link>https://Ryzzi.github.io/categories/test/</link>
