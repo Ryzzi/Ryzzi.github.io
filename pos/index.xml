@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pos on 橘子</title>
+    <link>https://Ryzzi.github.io/pos/</link>
+    <description>Recent content in Pos on 橘子</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>juzi</copyright>
+    <lastBuildDate>Thu, 29 Jan 2026 22:50:23 +0800</lastBuildDate>
+    <atom:link href="https://Ryzzi.github.io/pos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New</title>
+      <link>https://Ryzzi.github.io/pos/new/</link>
+      <pubDate>Thu, 29 Jan 2026 22:50:23 +0800</pubDate>
+      <guid>https://Ryzzi.github.io/pos/new/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
