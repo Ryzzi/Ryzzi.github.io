@@ -8,12 +8,5 @@
     <language>zh-cn</language>
     <copyright>juzi</copyright>
     <atom:link href="https://Ryzzi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://Ryzzi.github.io/categories/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://Ryzzi.github.io/categories/test/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
