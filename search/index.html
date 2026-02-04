@@ -18,68 +18,6 @@
 
 
 
-
-<style>
-  #pink-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none}
-</style>
-<canvas id="pink-canvas"></canvas>
-<script>
-  (function(){
-    const c=document.getElementById('pink-canvas'),x=c.getContext('2d'),w=window;
-    let p=[];
-    function resize(){c.width=w.innerWidth;c.height=w.innerHeight;}
-    function rand(n){return Math.random()*n;}
-    function init(){
-      resize();
-      for(let i=0;i<160;i++)p.push({
-        x:rand(c.width),y:rand(c.height),
-        vx:rand(1.8)-0.9,vy:rand(1.8)-0.9,r:rand(2)+2,
-        ex:0,ey:0   
-      });
-      w.addEventListener('resize',resize);
-      w.addEventListener('click',e=>{
-        p.forEach(q=>{
-          const dx=q.x-e.clientX,dy=q.y-e.clientY,d=Math.hypot(dx,dy);
-          if(d<150){
-            const f=(1-d/150)*2;   
-            q.ex=dx/d*f; q.ey=dy/d*f; 
-          }
-        });
-      });
-      draw();
-    }
-    function draw(){
-      x.clearRect(0,0,c.width,c.height);
-      x.strokeStyle='rgba(255,105,180,.35)';
-      x.lineWidth=1;
-      p.forEach((a,i)=>{
-        
-        a.vx+=a.ex; a.vy+=a.ey;
-        a.ex*=0.85; a.ey*=0.85;
-        if(Math.hypot(a.ex,a.ey)<0.05){a.ex=0;a.ey=0;} 
-
-        a.x+=a.vx; a.y+=a.vy;
-        if(a.x<0||a.x>c.width)a.vx*=-1;
-        if(a.y<0||a.y>c.height)a.vy*=-1;
-        a.x=Math.max(0,Math.min(c.width,a.x));
-        a.y=Math.max(0,Math.min(c.height,a.y));
-        for(let j=i+1;j<p.length;j++){
-          const b=p[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
-          if(d<120){x.globalAlpha=(1-d/120)*.5;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
-        }
-        x.globalAlpha=.9;x.fillStyle='#ff69b4';x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill();
-      });
-      requestAnimationFrame(draw);
-    }
-    init();
-  })();
-
-</script>  
-
-
-
-
-
 </head>
     <body class="template-search">
     <script>
@@ -384,18 +322,6 @@
     </section>
 </footer>
 
-<style>
-  @fonter-face {
-    fonter-family: 'ZiKuJiangHuGuFengTi-2';
-    src: url(https://Ryzzi.github.io/fonter/ZiKuJiangHuGuFengTi-2.ttf) format('truetype');
-  }
-
-  :root {
-    --base-fonter-family: 'ZiKuJiangHuGuFengTi-2.ttf';
-    --code-fonter-family: 'ZiKuJiangHuGuFengTi-2.ttf';
-  }
-</style>
-
             </main>
         </div>
         <script type="text/javascript" src="/ts/main.acaf849f2b273f6a8368a58b001f336738d0c948d92e79b116467d0c7515f932.js" defer></script>
@@ -410,23 +336,32 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
+
+
 <style>
 @font-face {
-  font-family: '汤圆体';
-  src: url('https://Ryzzi.github.io/fonter/%E6%B1%A4%E5%9C%86%E4%BD%93.ttf') format('truetype');
+  font-family: '优设好身体';
+  src: url('https://Ryzzi.github.io/fonter/%E4%BC%98%E8%AE%BE%E5%A5%BD%E8%BA%AB%E4%BD%93.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-:root {
-  --base-font-family: '汤圆体', sans-serif;
-  --code-font-family: '汤圆体', monospace;
+  font-display: swap;  
 }
 
  
-body, .post-content, .sidebar, .footer {
+
+:root {
+  --base-font-family: '优设好身体', sans-serif !important;
+  --code-font-family: '优设好身体', monospace !important;
+}
+ 
+body, .site-footer, .post-content, .sidebar, .powerby, .copyright {
   font-family: var(--base-font-family) !important;
 }
+
+
+ 
+ 
 </style>
 
 
@@ -572,18 +507,21 @@ document.addEventListener('pjax:complete', initFlyingFish);
   top: 8px;
   right: 8px;
   border-radius: 4px;
-  border: 1px solid #333;
-  background: #3d3c3c;
-  color: #fff;
+   
+  border: 1px solid #F85E9F; 
+  background: #F85E9F;  
+  color: #FFFFFF;  
   padding: 4px 8px;
   font-size: 12px;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s, border 0.2s;  
+  z-index: 99;  
 }
 .copyCodeButton:hover {
-  background: var(--hover-text-color);
-  color: #fff;
+  background: #FF97C1 !important;
+  border: 1px solid #FF97C1 !important;
 }
+
 
  
 .snack-left-top {
@@ -686,5 +624,25 @@ document.addEventListener('pjax:complete', initFlyingFish);
     
     showHideView();
 </script>
+
+
+<div id="particles-js"></div>
+
+<script src=https://Ryzzi.github.io/background/particles.min.js></script>
+<script>
+  particlesJS.load('particles-js', "https://Ryzzi.github.io/background/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
     </body>
 </html>
