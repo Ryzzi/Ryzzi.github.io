@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="演示说明">
-<title>Posts</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
+<title>橘子</title>
 
-<link rel='canonical' href='https://Ryzzi.github.io/post/'>
+<link rel='canonical' href='https://Ryzzi.github.io/p/'>
 
-<link rel="stylesheet" href="/scss/style.min.d02e3b2ee6cd2df01213c7c37412a8f3b1c1df85aced13a05b9627d33f7d57ef.css"><meta property='og:title' content="Posts">
-<meta property='og:description' content="演示说明">
-<meta property='og:url' content='https://Ryzzi.github.io/post/'>
+<link rel="stylesheet" href="/scss/style.min.d02e3b2ee6cd2df01213c7c37412a8f3b1c1df85aced13a05b9627d33f7d57ef.css"><meta property='og:title' content="橘子">
+<meta property='og:description' content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
+<meta property='og:url' content='https://Ryzzi.github.io/p/'>
 <meta property='og:site_name' content='橘子'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-01-29T22:54:22&#43;08:00 '/>
-<meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="演示说明"><link rel="alternate" type="application/rss&#43;xml" href="https://Ryzzi.github.io/post/index.xml">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' />
+<meta name="twitter:title" content="橘子">
+<meta name="twitter:description" content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
 
 
 
 
 
 </head>
-    <body class="">
+    <body class="
+    article-page
+    ">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
@@ -247,7 +249,7 @@
                                         
                                     
                                 
-                                <option value="/post/" selected>简体中文</option>
+                                <option value="/p/" selected>简体中文</option>
                             
                         </select>
                     </li>
@@ -279,178 +281,174 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                <form action="/search/" class="search-form widget" >
-        <p>
-            <label></label>
-            <input name="keyword" required placeholder="" />
-        
-            <button title="">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-            </button>
-        </p>
-    </form>
-            
-        
-            
-                <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-infinity" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M9.828 9.172a4 4 0 1 0 0 5.656 a10 10 0 0 0 2.172 -2.828a10 10 0 0 1 2.172 -2.828 a4 4 0 1 1 0 5.656a10 10 0 0 1 -2.172 -2.828a10 10 0 0 0 -2.172 -2.828" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title"></h2>
-
-        
-        
-        
-        <div class="widget-archive--list">
-            <div class="archives-year">
-                    <a href="/archives/#2026">
-                        
-                            <span class="year">2026</span>
-                            <span class="count">3</span>
-                        
-                    </a> 
-                </div>
-            <div class="archives-year">
-                    <a href="/archives/#0001">
-                        
-                            <span class="year">0001</span>
-                            <span class="count">1</span>
-                        
-                    </a> 
-                </div>
-            
-        </div>
-    </section>
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title"></h2>
-
-    <div class="tagCloud-tags">
-        
-    </div>
-</section>
-
-            
-        
-            
-                <section class="widget tagCloud">
-    <div class="widget-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
-  <circle cx="9" cy="9" r="2" />
-</svg>
-
-
-
-    </div>
-    <h2 class="widget-title section-title"></h2>
-
-    <div class="tagCloud-tags">
-        
-    </div>
-</section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
-    <header>
-        <h3 class="section-title">
-            
-                
-            
-        </h3>
+    <article class="main-article">
+    <header class="article-header">
 
-        <div class="section-card">
-            <div class="section-details">
-                <h3 class="section-count"></h3>
-                <h1 class="section-term">Posts</h1>
-                
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
             </div>
+        
+
+        
+        <div id="viewCount">
+            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1770133631807" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5079" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M754.133333 242.773333c-10.88-10.88-26.666667-14.933333-41.386666-10.88-14.72 4.053333-26.24 15.786667-30.08 30.506667-2.986667 11.306667-21.333333 69.973333-40.32 130.133333-48.64-69.333333-119.04-181.12-138.026667-271.146666-1.28-8.533333-5.333333-16.853333-12.16-23.466667a42.666667 42.666667 0 0 0-60.16 0.213333l-0.426667 0.426667c-88.96 90.666667-161.28 261.12-155.093333 395.306667-19.2-24.96-33.28-49.066667-36.906667-67.84-3.626667-18.346667-18.56-32.213333-37.12-34.346667-18.56-2.133333-36.266667 8.106667-43.733333 25.173333-30.08 67.626667-42.666667 142.506667-36.053333 218.24 17.28 134.826667 117.546667 244.906667 261.333333 287.146667 37.12 11.093333 75.52 16.853333 114.346667 17.066667 147.413333 0 325.973333-85.76 382.293333-249.813334 71.68-208-48.426667-369.28-126.506667-446.72z m46.293334 418.346667C757.546667 785.92 612.906667 853.333333 498.986667 853.333333c-30.506667-0.213333-61.013333-4.693333-90.453334-13.44-87.04-25.386667-185.6-95.573333-200.746666-214.186666-2.346667-26.453333-1.493333-53.333333 2.133333-79.573334 49.066667 64.426667 114.346667 120.106667 125.013333 128.853334 14.72 12.373333 36.053333 13.226667 51.84 2.346666 15.786667-11.093333 22.186667-31.146667 15.786667-49.28l-30.933333-86.613333c-28.373333-79.146667 7.466667-221.653333 74.24-323.84 56.96 141.653333 173.226667 286.933333 178.986666 294.186667 9.813333 12.16 25.6 18.133333 40.96 15.146666 15.36-2.773333 27.946667-14.08 32.853334-29.013333 3.84-11.946667 26.026667-81.493333 43.946666-138.666667 53.12 71.04 100.693333 177.066667 57.813334 301.866667z" p-id="5080" fill="#cdcdcd"></path></svg>
+            <time class="article-time--reading">
+                <span id="vercount_value_page_pv"></span>次
+            </time>
         </div>
-    </header>
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    
+
+    <section class="article-content">
     
     
-        <section class="article-list--compact">
-            
-                <article>
-    <a href="/p/newnewnew/">
-        <div class="article-details">
-            <h2 class="article-title">Newnewnew</h2>
-            <footer class="article-time">
-                <time datetime='2026-01-29T22:54:22&#43;08:00'>2026-01-29</time>
-            </footer>
-        </div>
-    </a>
+    <p>这是基于stm32f103c8t6的智能电池管理系统
+首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。
+首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。
+打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。
+把start文件还有library文件添加到工程中。
+添加main.c文件到工程中。加入配置文件
+编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。<br>
+1.系统初始化
+// 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit
+void MySystemInit(void)
+{
+// 配置系统时钟为72MHz
+RCC_DeInit();
+RCC_HSEConfig(RCC_HSE_ON);
+while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET);
+RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
+RCC_PLLCmd(ENABLE);
+while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);
+RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
+while(RCC_GetSYSCLKSource() != 0x08);
+}</p>
+<p>2.创建gpio引脚控制模块文件
+2.1  gpio.c
+// 功能：定义gpio引脚的初始化和控制函数
+// 包含头文件：gpio.h
+// 定义函数：
+// void GpioInit(void)：初始化gpio引脚
+// void GpioWrite(uint8_t pin, uint8_t value)：写入gpio引脚的值
+// uint8_t GpioRead(uint8_t pin)：读取gpio引脚的值</p>
+<p>#include &ldquo;stm32f10x.h&rdquo;</p>
+<p>// GPIO初始化
+void GPIO_Init(void)
+{
+GPIO_InitTypeDef GPIO_InitStructure;</p>
+<pre><code>// 使能GPIO时钟
+RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOA, ENABLE);
+
+// 配置LED引脚（PC13）
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+GPIO_Init(GPIOC, &amp;GPIO_InitStructure);
+
+// 配置继电器控制引脚（PA0）
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
+</code></pre>
+<p>}</p>
+<p>// 控制LED
+void LED_Control(uint8_t state)
+{
+if(state)
+GPIO_SetBits(GPIOC, GPIO_Pin_13);
+else
+GPIO_ResetBits(GPIOC, GPIO_Pin_13);
+}</p>
+<p>// 控制继电器
+void Relay_Control(uint8_t state)
+{
+if(state)
+GPIO_SetBits(GPIOA, GPIO_Pin_0);
+else
+GPIO_ResetBits(GPIOA, GPIO_Pin_0);
+}</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
 </article>
-            
-                <article>
-    <a href="/p/hello/">
-        <div class="article-details">
-            <h2 class="article-title">hello</h2>
-            <footer class="article-time">
-                <time datetime='2026-01-29T22:54:22&#43;09:00'>2026-01-29</time>
-            </footer>
-        </div>
-    </a>
-</article>
-            
-                <article>
-    <a href="/p/%E6%B5%8B%E8%AF%95/">
-        <div class="article-details">
-            <h2 class="article-title">测试  </h2>
-            <footer class="article-time">
-                <time datetime='2026-01-29T22:54:22&#43;09:00'>2026-01-29</time>
-            </footer>
-        </div>
-    </a>
-</article>
-            
-                <article>
-    <a href="/p/">
-        <div class="article-details">
-            <h2 class="article-title"></h2>
-            <footer class="article-time">
-                <time datetime='0001-01-01T00:00:00Z'>0001-01-01</time>
-            </footer>
-        </div>
-    </a>
-</article>
-            
-        </section>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
     <footer class="site-footer">
     <section class="copyright">
         &copy; 
@@ -496,6 +494,53 @@
         
     </section>
 </footer>
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+    <script src="https://giscus.app/client.js"
+        data-repo="Ryzzi/Ryzzi.github.io"
+        data-repo-id="R_kgDORDwfRQ"
+        data-category="General"
+        data-category-id="DIC_kwDORDwfRc4C1sDR"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
 
             </main>
         </div>

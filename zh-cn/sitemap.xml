@@ -11,7 +11,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://Ryzzi.github.io/"
                 />
   </url><url>
@@ -33,6 +33,8 @@
     <loc>https://Ryzzi.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://Ryzzi.github.io/p/</loc>
+  </url><url>
     <loc>https://Ryzzi.github.io/%E6%96%B0%E5%BB%BA-%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</loc>
   </url><url>
     <loc>https://Ryzzi.github.io/archives/</loc>
@@ -45,7 +47,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://Ryzzi.github.io/categories/"
                 />
   </url><url>
@@ -57,7 +59,7 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="zh-cn"
+                hreflang="en-us"
                 href="https://Ryzzi.github.io/tags/"
                 />
   </url><url>
