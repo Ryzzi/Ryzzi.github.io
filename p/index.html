@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="文件必须在\\dev\\content\\post中 新建文件夹为大标题\n文件夹内要有md文件\nmd文件格式如下 : 下面为开头 date = &lsquo;2026-01-29T22:54:22+09:00&rsquo; draft = false title = &lsquo;这是标题 '\n这是正文 正文结束 每次上传gitthub代码 git add .\ngit commit -m &ldquo;新增Hugo博客第某篇文章&rdquo;\n">
 <title>橘子</title>
 
 <link rel='canonical' href='https://Ryzzi.github.io/p/'>
 
 <link rel="stylesheet" href="/scss/style.min.d02e3b2ee6cd2df01213c7c37412a8f3b1c1df85aced13a05b9627d33f7d57ef.css"><meta property='og:title' content="橘子">
-<meta property='og:description' content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
+<meta property='og:description' content="文件必须在\\dev\\content\\post中 新建文件夹为大标题\n文件夹内要有md文件\nmd文件格式如下 : 下面为开头 date = &lsquo;2026-01-29T22:54:22+09:00&rsquo; draft = false title = &lsquo;这是标题 '\n这是正文 正文结束 每次上传gitthub代码 git add .\ngit commit -m &ldquo;新增Hugo博客第某篇文章&rdquo;\n">
 <meta property='og:url' content='https://Ryzzi.github.io/p/'>
 <meta property='og:site_name' content='橘子'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' />
 <meta name="twitter:title" content="橘子">
-<meta name="twitter:description" content="这是基于stm32f103c8t6的智能电池管理系统 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。 打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。 把start文件还有library文件添加到工程中。 添加main.c文件到工程中。加入配置文件 编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。\n1.系统初始化 // 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit void MySystemInit(void) { // 配置系统时钟为72MHz RCC_DeInit(); RCC_HSEConfig(RCC_HSE_ON); while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET); RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9); RCC_PLLCmd(ENABLE); while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET); RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK); while(RCC_GetSYSCLKSource() != 0x08); }\n">
+<meta name="twitter:description" content="文件必须在\\dev\\content\\post中 新建文件夹为大标题\n文件夹内要有md文件\nmd文件格式如下 : 下面为开头 date = &lsquo;2026-01-29T22:54:22+09:00&rsquo; draft = false title = &lsquo;这是标题 '\n这是正文 正文结束 每次上传gitthub代码 git add .\ngit commit -m &ldquo;新增Hugo博客第某篇文章&rdquo;\n">
 
 
 
@@ -281,7 +281,49 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title"></h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#文件必须在devcontentpost中">文件必须在\dev\content\post中</a></li>
+          </ol>
+        </li>
+        <li><a href="#每次上传gitthub代码">每次上传gitthub代码</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -336,74 +378,62 @@
 </header>
 
     
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span></span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ol>
+    <li>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#文件必须在devcontentpost中">文件必须在\dev\content\post中</a></li>
+          </ol>
+        </li>
+        <li><a href="#每次上传gitthub代码">每次上传gitthub代码</a></li>
+      </ol>
+    </li>
+  </ol>
+
+            </nav>
+        </details>
+    </aside>
+    
 
     <section class="article-content">
     
     
-    <p>这是基于stm32f103c8t6的智能电池管理系统
-首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。
-首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。
-打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。
-把start文件还有library文件添加到工程中。
-添加main.c文件到工程中。加入配置文件
-编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。<br>
-1.系统初始化
-// 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit
-void MySystemInit(void)
-{
-// 配置系统时钟为72MHz
-RCC_DeInit();
-RCC_HSEConfig(RCC_HSE_ON);
-while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET);
-RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);
-RCC_PLLCmd(ENABLE);
-while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);
-RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);
-while(RCC_GetSYSCLKSource() != 0x08);
-}</p>
-<p>2.创建gpio引脚控制模块文件
-2.1  gpio.c
-// 功能：定义gpio引脚的初始化和控制函数
-// 包含头文件：gpio.h
-// 定义函数：
-// void GpioInit(void)：初始化gpio引脚
-// void GpioWrite(uint8_t pin, uint8_t value)：写入gpio引脚的值
-// uint8_t GpioRead(uint8_t pin)：读取gpio引脚的值</p>
-<p>#include &ldquo;stm32f10x.h&rdquo;</p>
-<p>// GPIO初始化
-void GPIO_Init(void)
-{
-GPIO_InitTypeDef GPIO_InitStructure;</p>
-<pre><code>// 使能GPIO时钟
-RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOA, ENABLE);
-
-// 配置LED引脚（PC13）
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_Init(GPIOC, &amp;GPIO_InitStructure);
-
-// 配置继电器控制引脚（PA0）
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
-GPIO_Init(GPIOA, &amp;GPIO_InitStructure);
-</code></pre>
-<p>}</p>
-<p>// 控制LED
-void LED_Control(uint8_t state)
-{
-if(state)
-GPIO_SetBits(GPIOC, GPIO_Pin_13);
-else
-GPIO_ResetBits(GPIOC, GPIO_Pin_13);
-}</p>
-<p>// 控制继电器
-void Relay_Control(uint8_t state)
-{
-if(state)
-GPIO_SetBits(GPIOA, GPIO_Pin_0);
-else
-GPIO_ResetBits(GPIOA, GPIO_Pin_0);
-}</p>
+    <h4 id="文件必须在devcontentpost中">文件必须在\dev\content\post中
+</h4><p>新建文件夹为大标题</p>
+<p><img src="C:%5cUsers%5csongjialu%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20260319154032526.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="image-20260319154032526"
+	
+	
+></p>
+<p>文件夹内要有md文件</p>
+<h5 id="md文件格式如下---下面为开头">md文件格式如下 :  下面为开头
+</h5><hr>
+<p>date = &lsquo;2026-01-29T22:54:22+09:00&rsquo;
+draft = false
+title = &lsquo;这是标题  '</p>
+<hr>
+<h6 id="这是正文">这是正文
+</h6><h6 id="正文结束">正文结束
+</h6><h3 id="每次上传gitthub代码">每次上传gitthub代码
+</h3><p>git add .</p>
+<p>git commit -m &ldquo;新增Hugo博客第某篇文章&rdquo;</p>
+<p>git push</p>
 
 </section>
 
@@ -490,7 +520,7 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
         
         
         
-        <p>发布了 10 篇文章 | 共 832 字</p> <br />
+        <p>发布了 10 篇文章 | 共 983 字</p> <br />
         
     </section>
 </footer>

@@ -7,45 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>juzi</copyright>
-        <lastBuildDate>Thu, 29 Jan 2026 22:54:22 +0800</lastBuildDate><atom:link href="https://Ryzzi.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Newnewnew</title>
-        <link>https://Ryzzi.github.io/p/newnewnew/</link>
-        <pubDate>Thu, 29 Jan 2026 22:54:22 +0800</pubDate>
+        <lastBuildDate>Wed, 18 Mar 2026 22:54:22 +0800</lastBuildDate><atom:link href="https://Ryzzi.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>智能电池管理系统</title>
+        <link>https://Ryzzi.github.io/p/%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link>
+        <pubDate>Wed, 18 Mar 2026 22:54:22 +0800</pubDate>
         
-        <guid>https://Ryzzi.github.io/p/newnewnew/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>hello</title>
-        <link>https://Ryzzi.github.io/p/hello/</link>
-        <pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
-        
-        <guid>https://Ryzzi.github.io/p/hello/</guid>
-        <description>&lt;p&gt;假如我是你好hello&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>测试  </title>
-        <link>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</link>
-        <pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
-        
-        <guid>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>归档/archives</title>
-        <link>https://Ryzzi.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://Ryzzi.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://Ryzzi.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Ryzzi.github.io/p/</guid>
+        <guid>https://Ryzzi.github.io/p/%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;p&gt;这是基于stm32f103c8t6的智能电池管理系统
 首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。
 首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。
@@ -110,15 +77,74 @@ GPIO_SetBits(GPIOA, GPIO_Pin_0);
 else
 GPIO_ResetBits(GPIOA, GPIO_Pin_0);
 }&lt;/p&gt;
+&lt;h2 id=&#34;其余可在github查看ryzzibms&#34;&gt;其余可在GitHub查看：&lt;a class=&#34;link&#34; href=&#34;https://github.com/Ryzzi/BMS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Ryzzi/BMS&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Newnewnew</title>
+        <link>https://Ryzzi.github.io/p/newnewnew/</link>
+        <pubDate>Thu, 29 Jan 2026 22:54:22 +0800</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/newnewnew/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>hello</title>
+        <link>https://Ryzzi.github.io/p/hello/</link>
+        <pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/hello/</guid>
+        <description>&lt;p&gt;假如我是你好hello&lt;/p&gt;
 </description>
         </item>
         <item>
+        <title>测试  </title>
+        <link>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</link>
+        <pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>归档/archives</title>
+        <link>https://Ryzzi.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://Ryzzi.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
         <title></title>
-        <link>https://Ryzzi.github.io/%E6%96%B0%E5%BB%BA-%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</link>
+        <link>https://Ryzzi.github.io/p/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Ryzzi.github.io/%E6%96%B0%E5%BB%BA-%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</guid>
-        <description>&lt;p&gt;测试1&lt;/p&gt;
+        <guid>https://Ryzzi.github.io/p/</guid>
+        <description>&lt;h4 id=&#34;文件必须在devcontentpost中&#34;&gt;文件必须在\dev\content\post中
+&lt;/h4&gt;&lt;p&gt;新建文件夹为大标题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5csongjialu%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20260319154032526.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260319154032526&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;文件夹内要有md文件&lt;/p&gt;
+&lt;h5 id=&#34;md文件格式如下---下面为开头&#34;&gt;md文件格式如下 :  下面为开头
+&lt;/h5&gt;&lt;hr&gt;
+&lt;p&gt;date = &amp;lsquo;2026-01-29T22:54:22+09:00&amp;rsquo;
+draft = false
+title = &amp;lsquo;这是标题  &#39;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;这是正文&#34;&gt;这是正文
+&lt;/h6&gt;&lt;h6 id=&#34;正文结束&#34;&gt;正文结束
+&lt;/h6&gt;&lt;h3 id=&#34;每次上传gitthub代码&#34;&gt;每次上传gitthub代码
+&lt;/h3&gt;&lt;p&gt;git add .&lt;/p&gt;
+&lt;p&gt;git commit -m &amp;ldquo;新增Hugo博客第某篇文章&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;git push&lt;/p&gt;
 </description>
         </item>
         <item>
