@@ -8,6 +8,14 @@
         <language>en-us</language>
         <copyright>juzi</copyright>
         <lastBuildDate>Wed, 18 Mar 2026 22:54:22 +0800</lastBuildDate><atom:link href="https://Ryzzi.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>打败</title>
+        <link>https://Ryzzi.github.io/p/%E6%89%93%E8%B4%A5/</link>
+        <pubDate>Wed, 18 Mar 2026 22:54:22 +0800</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/%E6%89%93%E8%B4%A5/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>智能电池管理系统</title>
         <link>https://Ryzzi.github.io/p/%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Wed, 18 Mar 2026 22:54:22 +0800</pubDate>
@@ -113,15 +121,6 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
         
         <guid>https://Ryzzi.github.io/archives/</guid>
         <description></description>
-        </item>
-        <item>
-        <title></title>
-        <link>https://Ryzzi.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Ryzzi.github.io/p/</guid>
-        <description>&lt;p&gt;11111111&lt;/p&gt;
-</description>
         </item>
         <item>
         <title></title>
