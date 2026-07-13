@@ -48,6 +48,13 @@
 				<link>https://Ryzzi.github.io/p/</link>
 				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 				<guid>https://Ryzzi.github.io/p/</guid>
+				<description>&lt;p&gt;11111111&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title></title>
+				<link>https://Ryzzi.github.io/p/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://Ryzzi.github.io/p/</guid>
 				<description>&lt;h4 id=&#34;文件必须在devcontentpost中&#34;&gt;文件必须在\dev\content\post中&#xA;&lt;/h4&gt;&lt;p&gt;新建文件夹为大标题&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5csongjialu%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20260319154032526.png&#34;&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;&#xA;&#x9;loading=&#34;lazy&#34;&#xA;&#x9;&#xA;&#x9;&#x9;alt=&#34;image-20260319154032526&#34;&#xA;&#x9;&#xA;&#x9;&#xA;&gt;&lt;/p&gt;&#xA;&lt;p&gt;文件夹内要有md文件&lt;/p&gt;&#xA;&lt;h5 id=&#34;md文件格式如下---下面为开头&#34;&gt;md文件格式如下 :  下面为开头&#xA;&lt;/h5&gt;&lt;hr&gt;&#xA;&lt;p&gt;date = &amp;lsquo;2026-01-29T22:54:22+09:00&amp;rsquo;&#xA;draft = false&#xA;title = &amp;lsquo;这是标题  &#39;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h6 id=&#34;这是正文&#34;&gt;这是正文&#xA;&lt;/h6&gt;&lt;h6 id=&#34;正文结束&#34;&gt;正文结束&#xA;&lt;/h6&gt;&lt;p&gt;然后保存&lt;/p&gt;&#xA;&lt;p&gt;书写完毕&lt;/p&gt;&#xA;&lt;h1 id=&#34;ps最后需上传gitthub代码&#34;&gt;ps.最后需上传gitthub代码&#xA;&lt;/h1&gt;&lt;h5 id=&#34;转到dev全选目录输入cmd打开命令终端&#34;&gt;转到dev全选目录输入cmd打开命令终端&#xA;&lt;/h5&gt;&lt;ol&gt;&#xA;&lt;li&gt;把所有修改（新文章）加入暂存&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;git add .&#xA;2. 提交修改，备注写新增文章&lt;/p&gt;</description>
 			</item>
 	</channel>
