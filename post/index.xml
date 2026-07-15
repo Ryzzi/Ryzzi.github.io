@@ -22,26 +22,5 @@
 				<guid>https://Ryzzi.github.io/p/%E6%99%BA%E8%83%BD%E7%94%B5%E6%B1%A0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid>
 				<description>&lt;p&gt;这是基于stm32f103c8t6的智能电池管理系统&#xA;首先，stm32f103c8t6是一款基于arm cortex-m3内核的微控制器，它的性能和成本都比较低，非常适合用于电池管理系统。然后，stm32f103c8t6的引脚数量比较多，非常适合用于连接电池模块和其他传感器。最后，stm32f103c8t6的开发环境比较完善，非常适合用于开发电池管理系统。&#xA;首先要连接电池模块和其他传感器，例如电压传感器、电流传感器、温度传感器等。然后，要编写代码来读取这些传感器的数据，并根据数据来控制电池模块的工作。最后，要将代码下载到stm32f103c8t6微控制器中。&#xA;打开keil uvision5，创建一个新的工程，选择stm32f103c8t6作为目标微控制器。然后，添加必要的库文件和头文件。最后，编写代码来初始化传感器和电池模块，并在主循环中读取传感器数据并控制电池模块的工作。&#xA;把start文件还有library文件添加到工程中。&#xA;添加main.c文件到工程中。加入配置文件&#xA;编写main.c文件，包括初始化传感器和电池模块，以及在主循环中读取传感器数据并控制电池模块的工作。&lt;br&gt;&#xA;1.系统初始化&#xA;// 会与标准库的SystemInit冲突，需要在main.c中重新定义，建议函数命名改为MySystemInit&#xA;void MySystemInit(void)&#xA;{&#xA;// 配置系统时钟为72MHz&#xA;RCC_DeInit();&#xA;RCC_HSEConfig(RCC_HSE_ON);&#xA;while(RCC_GetFlagStatus(RCC_FLAG_HSERDY) == RESET);&#xA;RCC_PLLConfig(RCC_PLLSource_HSE_Div1, RCC_PLLMul_9);&#xA;RCC_PLLCmd(ENABLE);&#xA;while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET);&#xA;RCC_SYSCLKConfig(RCC_SYSCLKSource_PLLCLK);&#xA;while(RCC_GetSYSCLKSource() != 0x08);&#xA;}&lt;/p&gt;</description>
 			</item>
-			<item>
-				<title>Newnewnew</title>
-				<link>https://Ryzzi.github.io/p/newnewnew/</link>
-				<pubDate>Thu, 29 Jan 2026 22:54:22 +0800</pubDate>
-				<guid>https://Ryzzi.github.io/p/newnewnew/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>hello</title>
-				<link>https://Ryzzi.github.io/p/hello/</link>
-				<pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
-				<guid>https://Ryzzi.github.io/p/hello/</guid>
-				<description>&lt;p&gt;假如我是你好hello&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>测试  </title>
-				<link>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</link>
-				<pubDate>Thu, 29 Jan 2026 22:54:22 +0900</pubDate>
-				<guid>https://Ryzzi.github.io/p/%E6%B5%8B%E8%AF%95/</guid>
-				<description></description>
-			</item>
 	</channel>
 </rss>
