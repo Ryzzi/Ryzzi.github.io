@@ -8,12 +8,13 @@
         <language>en-us</language>
         <copyright>juzi</copyright>
         <lastBuildDate>Wed, 18 Mar 2026 22:54:22 +0800</lastBuildDate><atom:link href="https://Ryzzi.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>打败</title>
-        <link>https://Ryzzi.github.io/p/%E6%89%93%E8%B4%A5/</link>
+        <title>7.15</title>
+        <link>https://Ryzzi.github.io/p/7.15/</link>
         <pubDate>Wed, 18 Mar 2026 22:54:22 +0800</pubDate>
         
-        <guid>https://Ryzzi.github.io/p/%E6%89%93%E8%B4%A5/</guid>
-        <description></description>
+        <guid>https://Ryzzi.github.io/p/7.15/</guid>
+        <description>&lt;p&gt;今天改了后台&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>智能电池管理系统</title>
@@ -124,43 +125,279 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
         </item>
         <item>
         <title></title>
-        <link>https://Ryzzi.github.io/p/</link>
+        <link>https://Ryzzi.github.io/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://Ryzzi.github.io/p/</guid>
-        <description>&lt;h4 id=&#34;文件必须在devcontentpost中&#34;&gt;文件必须在\dev\content\post中
-&lt;/h4&gt;&lt;p&gt;新建文件夹为大标题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5csongjialu%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20260319154032526.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260319154032526&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;文件夹内要有md文件&lt;/p&gt;
-&lt;h5 id=&#34;md文件格式如下---下面为开头&#34;&gt;md文件格式如下 :  下面为开头
-&lt;/h5&gt;&lt;hr&gt;
-&lt;p&gt;date = &amp;lsquo;2026-01-29T22:54:22+09:00&amp;rsquo;
-draft = false
-title = &amp;lsquo;这是标题  &#39;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h6 id=&#34;这是正文&#34;&gt;这是正文
-&lt;/h6&gt;&lt;h6 id=&#34;正文结束&#34;&gt;正文结束
-&lt;/h6&gt;&lt;p&gt;然后保存&lt;/p&gt;
-&lt;p&gt;书写完毕&lt;/p&gt;
-&lt;h1 id=&#34;ps最后需上传gitthub代码&#34;&gt;ps.最后需上传gitthub代码
-&lt;/h1&gt;&lt;h5 id=&#34;转到dev全选目录输入cmd打开命令终端&#34;&gt;转到dev全选目录输入cmd打开命令终端
-&lt;/h5&gt;&lt;ol&gt;
-&lt;li&gt;把所有修改（新文章）加入暂存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;git add .
-2. 提交修改，备注写新增文章&lt;/p&gt;
-&lt;p&gt;git commit -m &amp;ldquo;例 新增文章：电池管理系统&amp;rdquo;
-3. 推送到GitHub远程仓库&lt;/p&gt;
-&lt;p&gt;git push&lt;/p&gt;
+        <guid>https://Ryzzi.github.io/</guid>
+        <description>&lt;p&gt;media:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;name: post-images&lt;br&gt;
+label: 文章配图&lt;br&gt;
+input: content/post&lt;br&gt;
+output: /content/post&lt;br&gt;
+categories: [image]&lt;/li&gt;
+&lt;li&gt;name: assets&lt;br&gt;
+label: 站点资源&lt;br&gt;
+input: assets&lt;br&gt;
+output: /assets&lt;br&gt;
+categories: [image]&lt;/li&gt;
+&lt;li&gt;name: banner&lt;br&gt;
+label: 站点头图&lt;br&gt;
+input: assets/images&lt;br&gt;
+output: /assets/images&lt;br&gt;
+categories: [image]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;content:&lt;/p&gt;
+&lt;h1 id=&#34;内容页面分组&#34;&gt;内容页面分组
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;name: content-pages&lt;br&gt;
+label: 📝 内容页面&lt;br&gt;
+type: group&lt;br&gt;
+items:&lt;/p&gt;
+&lt;h1 id=&#34;博客文章列表&#34;&gt;博客文章列表
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: posts&lt;br&gt;
+label: 📝 博客文章&lt;br&gt;
+type: collection&lt;br&gt;
+path: content/post&lt;br&gt;
+format: raw-frontmatter&lt;br&gt;
+filename:&lt;br&gt;
+template: &amp;ldquo;{title}.md&amp;rdquo;&lt;br&gt;
+field: title&lt;br&gt;
+exclude: [&amp;quot;&lt;strong&gt;/images/&lt;/strong&gt;&amp;quot;, &amp;ldquo;&lt;strong&gt;/*.avif&amp;rdquo;, &amp;ldquo;&lt;/strong&gt;/&lt;em&gt;.webp&amp;rdquo;, &amp;ldquo;**/&lt;/em&gt;.png&amp;rdquo;, &amp;ldquo;**/*.jpg&amp;rdquo;]&lt;br&gt;
+view:&lt;br&gt;
+primary: title&lt;br&gt;
+fields: [title, date, tags, categories, draft, pinned]&lt;br&gt;
+sort: [&amp;ldquo;date desc&amp;rdquo;, &amp;ldquo;title asc&amp;rdquo;]&lt;br&gt;
+search: [title, description, tags, categories]&lt;br&gt;
+default:&lt;br&gt;
+sort: date&lt;br&gt;
+order: desc&lt;br&gt;
+fields:
+&lt;ul&gt;
+&lt;li&gt;name: title&lt;br&gt;
+label: 标题&lt;br&gt;
+type: string&lt;br&gt;
+required: true&lt;/li&gt;
+&lt;li&gt;name: date&lt;br&gt;
+label: 发布时间&lt;br&gt;
+type: date&lt;br&gt;
+required: true&lt;br&gt;
+options:&lt;br&gt;
+time: true&lt;br&gt;
+format: yyyy-MM-ddTHH:mm:ss+08:00&lt;/li&gt;
+&lt;li&gt;name: updated&lt;br&gt;
+label: 更新时间&lt;br&gt;
+type: date&lt;br&gt;
+options:&lt;br&gt;
+time: true&lt;br&gt;
+format: yyyy-MM-ddTHH:mm:ss+08:00&lt;/li&gt;
+&lt;li&gt;name: draft&lt;br&gt;
+label: 草稿&lt;br&gt;
+type: boolean&lt;br&gt;
+default: false&lt;/li&gt;
+&lt;li&gt;name: description&lt;br&gt;
+label: 文章摘要&lt;br&gt;
+type: text&lt;/li&gt;
+&lt;li&gt;name: image&lt;br&gt;
+label: 封面图&lt;br&gt;
+type: image&lt;/li&gt;
+&lt;li&gt;name: tags&lt;br&gt;
+label: 标签&lt;br&gt;
+type: select&lt;br&gt;
+options:&lt;br&gt;
+multiple: true&lt;br&gt;
+creatable: true&lt;/li&gt;
+&lt;li&gt;name: categories&lt;br&gt;
+label: 分类&lt;br&gt;
+type: select&lt;br&gt;
+options:&lt;br&gt;
+multiple: true&lt;br&gt;
+creatable: true&lt;/li&gt;
+&lt;li&gt;name: lang&lt;br&gt;
+label: 语言&lt;br&gt;
+type: select&lt;br&gt;
+options:&lt;br&gt;
+values:&lt;br&gt;
+- { label: 中文, value: &amp;quot;&amp;quot; }&lt;br&gt;
+- { label: English, value: en }&lt;br&gt;
+- { label: 日本語, value: ja }&lt;br&gt;
+- { label: 繁體中文, value: zh_TW }&lt;br&gt;
+- { label: Русский, value: ru }&lt;/li&gt;
+&lt;li&gt;name: pinned&lt;br&gt;
+label: 置顶&lt;br&gt;
+type: boolean&lt;br&gt;
+default: false&lt;/li&gt;
+&lt;li&gt;name: author&lt;br&gt;
+label: 作者&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: sourceLink&lt;br&gt;
+label: 原文链接&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: licenseName&lt;br&gt;
+label: 许可协议名称&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: licenseUrl&lt;br&gt;
+label: 许可协议链接&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: comment&lt;br&gt;
+label: 启用评论&lt;br&gt;
+type: boolean&lt;br&gt;
+default: true&lt;/li&gt;
+&lt;li&gt;name: password&lt;br&gt;
+label: 文章密码&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: passwordHint&lt;br&gt;
+label: 密码提示&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: body&lt;br&gt;
+label: 正文&lt;br&gt;
+type: rich-text&lt;br&gt;
+required: true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;关于页面-about&#34;&gt;关于页面 /about
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: about&lt;br&gt;
+label: 📄 关于页面&lt;br&gt;
+type: file&lt;br&gt;
+path: content/about/_&lt;a class=&#34;link&#34; href=&#34;http://index.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;index.md&lt;/a&gt;&lt;br&gt;
+format: raw-frontmatter&lt;br&gt;
+fields:
+&lt;ul&gt;
+&lt;li&gt;name: title&lt;br&gt;
+label: 页面标题&lt;br&gt;
+type: string&lt;br&gt;
+default: &amp;ldquo;关于我&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;name: body&lt;br&gt;
+label: 正文&lt;br&gt;
+type: rich-text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;友情链接页面-pagelinks&#34;&gt;友情链接页面 /page/links
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: friends&lt;br&gt;
+label: 🔗 友情链接&lt;br&gt;
+type: file&lt;br&gt;
+path: content/page/links/&lt;a class=&#34;link&#34; href=&#34;http://index.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;index.md&lt;/a&gt;&lt;br&gt;
+format: raw-frontmatter&lt;br&gt;
+fields:
+&lt;ul&gt;
+&lt;li&gt;name: title&lt;br&gt;
+label: 页面标题&lt;br&gt;
+type: string&lt;br&gt;
+default: 友情链接&lt;/li&gt;
+&lt;li&gt;name: description&lt;br&gt;
+label: 页面描述&lt;br&gt;
+type: string&lt;/li&gt;
+&lt;li&gt;name: body&lt;br&gt;
+label: 正文&lt;br&gt;
+type: rich-text&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;站点基础设置分组&#34;&gt;站点基础设置分组
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: site-settings&lt;br&gt;
+label: ⚙️ 站点设置&lt;br&gt;
+type: group&lt;br&gt;
+description: 站点标题、域名、个人头像昵称、社交链接、公告、版权&lt;br&gt;
+items:
+&lt;ul&gt;
+&lt;li&gt;name: site-config&lt;br&gt;
+label: 🌐 站点主配置&lt;br&gt;
+type: file&lt;br&gt;
+path: hugo.yaml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: profile-config&lt;br&gt;
+label: 👤 侧边栏个人信息&lt;br&gt;
+type: file&lt;br&gt;
+path: hugo.yaml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: announcement-config&lt;br&gt;
+label: 📢 首页公告栏&lt;br&gt;
+type: file&lt;br&gt;
+path: config/announcement.toml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: license-config&lt;br&gt;
+label: 📜 底部版权协议&lt;br&gt;
+type: file&lt;br&gt;
+path: config/license.toml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;布局外观分组侧边栏导航页脚代码样式&#34;&gt;布局外观分组（侧边栏/导航/页脚/代码样式）
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: layout-appearance&lt;br&gt;
+label: 🎨 布局与外观&lt;br&gt;
+type: group&lt;br&gt;
+description: 侧边导航、侧边栏样式、页脚、代码块配色&lt;br&gt;
+items:
+&lt;ul&gt;
+&lt;li&gt;name: nav-bar-config&lt;br&gt;
+label: 🧭 侧边导航菜单&lt;br&gt;
+type: file&lt;br&gt;
+path: config/nav.toml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: sidebar-config&lt;br&gt;
+label: 📑 侧边栏样式&lt;br&gt;
+type: file&lt;br&gt;
+path: themes/hugo-theme-stack/assets/scss/partials/sidebar.scss&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: footer-config&lt;br&gt;
+label: 📎 页脚底部样式&lt;br&gt;
+type: file&lt;br&gt;
+path: themes/hugo-theme-stack/assets/scss/partials/footer.scss&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: expressive-code-config&lt;br&gt;
+label: 💻 代码块样式&lt;br&gt;
+type: file&lt;br&gt;
+path: themes/hugo-theme-stack/assets/scss/partials/article.scss&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;功能配置分组&#34;&gt;功能配置分组
+&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;name: feature-settings&lt;br&gt;
+label: 🔧 功能配置&lt;br&gt;
+type: group&lt;br&gt;
+items:
+&lt;ul&gt;
+&lt;li&gt;name: comment-config&lt;br&gt;
+label: 💬 评论系统&lt;br&gt;
+type: file&lt;br&gt;
+path: hugo.yaml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: analytics-config&lt;br&gt;
+label: 📊 访问统计&lt;br&gt;
+type: file&lt;br&gt;
+path: config/analytics.toml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;li&gt;name: friends-data&lt;br&gt;
+label: 🔗 友链数据列表&lt;br&gt;
+type: file&lt;br&gt;
+path: data/friends.yaml&lt;br&gt;
+format: yaml-frontmatter&lt;/li&gt;
+&lt;li&gt;name: pio-config&lt;br&gt;
+label: 🎭 看板娘&lt;br&gt;
+type: file&lt;br&gt;
+path: config/live2d.toml&lt;br&gt;
+format: code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;settings:&lt;br&gt;
+content:&lt;br&gt;
+merge: false&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -186,14 +423,6 @@ title = &amp;lsquo;这是标题  &#39;&lt;/p&gt;
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
         <guid>https://Ryzzi.github.io/search/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>友情链接/Links</title>
-        <link>https://Ryzzi.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Ryzzi.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/links/</guid>
         <description></description>
         </item>
         
