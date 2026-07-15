@@ -115,47 +115,6 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
         <description></description>
         </item>
         <item>
-        <title></title>
-        <link>https://Ryzzi.github.io/p/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://Ryzzi.github.io/p/</guid>
-        <description>&lt;h4 id=&#34;文件必须在devcontentpost中&#34;&gt;文件必须在\dev\content\post中
-&lt;/h4&gt;&lt;p&gt;新建文件夹为大标题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;C:%5cUsers%5csongjialu%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20260319154032526.png&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;image-20260319154032526&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;文件夹内要有md文件&lt;/p&gt;
-&lt;h5 id=&#34;md文件格式如下---下面为开头&#34;&gt;md文件格式如下 :  下面为开头
-&lt;/h5&gt;&lt;hr&gt;
-&lt;p&gt;date = &amp;lsquo;2026-01-29T22:54:22+09:00&amp;rsquo;
-draft = false
-title = &amp;lsquo;这是标题  &#39;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h6 id=&#34;这是正文&#34;&gt;这是正文
-&lt;/h6&gt;&lt;h6 id=&#34;正文结束&#34;&gt;正文结束
-&lt;/h6&gt;&lt;p&gt;然后保存&lt;/p&gt;
-&lt;p&gt;书写完毕&lt;/p&gt;
-&lt;h1 id=&#34;ps最后需上传gitthub代码&#34;&gt;ps.最后需上传gitthub代码
-&lt;/h1&gt;&lt;h5 id=&#34;转到dev全选目录输入cmd打开命令终端&#34;&gt;转到dev全选目录输入cmd打开命令终端
-&lt;/h5&gt;&lt;ol&gt;
-&lt;li&gt;把所有修改（新文章）加入暂存&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;git add .
-2. 提交修改，备注写新增文章&lt;/p&gt;
-&lt;p&gt;git commit -m &amp;ldquo;例 新增文章：电池管理系统&amp;rdquo;
-3. 推送到GitHub远程仓库&lt;/p&gt;
-&lt;p&gt;git push&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>Archives</title>
         <link>https://Ryzzi.github.io/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
