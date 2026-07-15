@@ -15,9 +15,6 @@
                 href="https://Ryzzi.github.io/"
                 />
   </url><url>
-    <loc>https://Ryzzi.github.io/p/7.15/</loc>
-    <lastmod>2026-03-18T22:54:22+08:00</lastmod>
-  </url><url>
     <loc>https://Ryzzi.github.io/post/</loc>
     <lastmod>2026-03-18T22:54:22+08:00</lastmod>
   </url><url>
@@ -39,7 +36,7 @@
     <loc>https://Ryzzi.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://Ryzzi.github.io/</loc>
+    <loc>https://Ryzzi.github.io/p/</loc>
   </url><url>
     <loc>https://Ryzzi.github.io/archives/</loc>
   </url><url>
@@ -70,5 +67,7 @@
     <loc>https://Ryzzi.github.io/%E5%85%B3%E4%BA%8E/about/</loc>
   </url><url>
     <loc>https://Ryzzi.github.io/search/</loc>
+  </url><url>
+    <loc>https://Ryzzi.github.io/%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5/links/</loc>
   </url>
 </urlset>
