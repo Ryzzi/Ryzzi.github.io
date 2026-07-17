@@ -82,6 +82,380 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
 &lt;/h2&gt;</description>
         </item>
         <item>
+        <title>Linux基本命令</title>
+        <link>https://Ryzzi.github.io/p/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+        <pubDate>Sat, 14 Mar 2026 22:54:22 +0800</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/linux%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+        <description>&lt;h1 id=&#34;基础命令&#34;&gt;基础命令
+&lt;/h1&gt;&lt;h2 id=&#34;一目录与文件操作&#34;&gt;一、目录与文件操作
+&lt;/h2&gt;&lt;h3 id=&#34;1-目录切换查看&#34;&gt;1. 目录切换查看
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pwd                 # 查看当前所在路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls                  # 列出当前目录文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -l               # 详细列表（权限、大小、时间）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -a               # 显示隐藏文件（.开头）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd /xxx             # 进入指定目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ..               # 返回上一级
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~                # 回到家目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd -                # 回到上一次所在目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-新建--删除--移动--复制&#34;&gt;2. 新建 / 删除 / 移动 / 复制
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir test          # 创建文件夹test
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p a/b/c      # 递归创建多级目录
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm file.txt         # 删除文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf test/        # 强制删除文件夹（慎用，无回收站）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp a.txt /tmp/      # 复制文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -r dir /tmp/     # 复制文件夹
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv old.txt new.txt  # 重命名文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv file /tmp/       # 移动文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;3-文件读写查看&#34;&gt;3. 文件读写查看
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat test.txt        # 一次性打印全部内容
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;less test.txt       # 分页查看（空格翻页 q退出）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;head -10 test.txt   # 看前10行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -20 test.txt   # 看最后20行
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tail -f test.log    # 实时跟踪日志（排查程序输出）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch a.txt         # 创建空文件/更新文件时间
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二文本搜索处理&#34;&gt;二、文本搜索处理
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep &amp;#34;关键词&amp;#34; test.txt    # 文件内搜索关键词
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;grep -r &amp;#34;key&amp;#34; ./          # 递归搜索整个目录所有文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;find ./ -name &amp;#34;*.log&amp;#34;     # 查找后缀log的文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sed / awk                 # 高级文本替换、统计（脚本常用）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;三权限--用户操作&#34;&gt;三、权限 &amp;amp; 用户操作
+&lt;/h2&gt;&lt;h3 id=&#34;1-权限修改&#34;&gt;1. 权限修改
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod 755 run.sh      # 修改文件读写执行权限
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown user:group file # 修改文件归属用户/组
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;2-用户切换&#34;&gt;2. 用户切换
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;whoami                # 查看当前登录用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;su root               # 切换root用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo 命令             # 临时用管理员权限执行单条命令
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;useradd testuser      # 新建用户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;passwd testuser       # 设置用户密码
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;四进程系统资源查看&#34;&gt;四、进程、系统资源查看
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -ef                # 查看所有进程
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;top / htop            # 实时查看CPU、内存、进程占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kill 1234             # 终止PID=1234进程
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;kill -9 1234          # 强制杀死卡死进程
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;df -h                 # 查看磁盘分区占用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;free -h               # 查看内存使用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;uptime                # 查看开机时长、负载
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;五网络命令&#34;&gt;五、网络命令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ip addr / ifconfig    # 查看本机网卡IP
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping www.baidu.com    # 测试网络连通
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl / wget url       # 访问网页、下载文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;netstat -tulnp        # 查看本机监听端口
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ss -tulnp             # 新版替代netstat，更快
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;六压缩解压&#34;&gt;六、压缩解压
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# tar.gz 打包压缩
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zcvf 打包名.tar.gz 文件夹/文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 解压 tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zxvf xxx.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# zip压缩
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;zip -r test.zip ./test
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 解压zip
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;unzip test.zip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;七软件安装主流发行版&#34;&gt;七、软件安装（主流发行版）
+&lt;/h2&gt;&lt;h3 id=&#34;centos--rhel&#34;&gt;CentOS / RHEL
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum install xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;yum remove xxx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;ubuntu--debian&#34;&gt;Ubuntu / Debian
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt install xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;apt remove xxx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;八系统开关机&#34;&gt;八、系统开关机
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;reboot                # 重启系统
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shutdown -h now       # 立刻关机
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;shutdown +10          # 10分钟后关机
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;九管道与重定向实用组合&#34;&gt;九、管道与重定向（实用组合）
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 把输出写入文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ls -l &amp;gt; list.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 追加写入文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#34;内容&amp;#34; &amp;gt;&amp;gt; log.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 管道：前一条输出作为后一条输入
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ps -ef | grep python
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;十快捷辅助命令&#34;&gt;十、快捷辅助命令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;history               # 查看历史执行命令
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;clear                 # 清屏
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;man ls                # 查看ls完整帮助文档
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;编译命令&#34;&gt;编译命令
+&lt;/h1&gt;&lt;h2 id=&#34;一gcc-编译常用参数组合&#34;&gt;一、gcc 编译常用参数组合
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 指定输出文件-o
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;arm-none-eabi-gcc main.c -o main.elf
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 指定头文件目录-I
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -I./inc -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 指定库路径+链接库 -L -l
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -L./lib -luart -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 开启调试信息-g
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -g -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 代码优化等级 O0/O1/O2/O3
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -O2 -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 自定义宏定义-D
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -DDEBUG -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 开启全部警告Wall
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc main.c -Wall -o app
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看gcc帮助文档
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gcc --help
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;man gcc
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;二make-工程编译命令&#34;&gt;二、make 工程编译命令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 执行编译
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 多线程并行编译加速
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make -j4
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 清理编译生成的文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make clean
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看make帮助
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;make -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;man make
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;三cmake-工程构建命令&#34;&gt;三、cmake 工程构建命令
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 创建build目录并生成构建文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake -B build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 编译工程
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake --build build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 删除构建目录，彻底清理
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf build
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 查看cmake帮助
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cmake -h
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;man cmake
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>嘉立创PCB绘制</title>
         <link>https://Ryzzi.github.io/p/%E5%98%89%E7%AB%8B%E5%88%9Bpcb%E7%BB%98%E5%88%B6/</link>
         <pubDate>Sat, 24 Jan 2026 14:43:22 +0800</pubDate>
@@ -89,6 +463,45 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
         <guid>https://Ryzzi.github.io/p/%E5%98%89%E7%AB%8B%E5%88%9Bpcb%E7%BB%98%E5%88%B6/</guid>
         <description>&lt;h1 id=&#34;tp4056充电模块&#34;&gt;Tp4056充电模块
 &lt;/h1&gt;&lt;p&gt;连接跳线可充电&lt;/p&gt;
+&lt;h1 id=&#34;原理图绘制&#34;&gt;原理图绘制
+&lt;/h1&gt;&lt;h2 id=&#34;1-前期捋需求先搭框架&#34;&gt;1. 前期捋需求，先搭框架
+&lt;/h2&gt;&lt;p&gt;先搞清楚板子干啥用，要啥功能：用啥单片机、有没有屏幕、要不要蓝牙、电机、电源输入多少伏。&lt;/p&gt;
+&lt;p&gt;把所有模块分开列出来：电源部分、主控芯片、外设接口、按键指示灯、下载口，分块规划，别堆一块。&lt;/p&gt;
+&lt;p&gt;确定每个芯片供电电压，3.3V 还是 5V，电流大概多大，避免后面供电扛不住。&lt;/p&gt;
+&lt;h2 id=&#34;2-选元器件定封装&#34;&gt;2. 选元器件，定封装
+&lt;/h2&gt;&lt;p&gt;芯片优先选常用货，不容易断货；电阻电容用 0805/0603 常规封装，焊接省事。&lt;/p&gt;
+&lt;p&gt;功率器件、大电流接口选大封装，散热走线留空间；传感器、小信号器件小封装省地方。&lt;/p&gt;
+&lt;p&gt;查芯片手册，确认每个引脚功能、典型应用电路，官方参考电路直接拿来改，少踩坑。&lt;/p&gt;
+&lt;h2 id=&#34;3-分模块画原理图一块一块画别一口气堆完&#34;&gt;3. 分模块画原理图，一块一块画，别一口气堆完
+&lt;/h2&gt;&lt;h3 id=&#34;1电源模块重中之重最先画&#34;&gt;（1）电源模块（重中之重，最先画）
+&lt;/h3&gt;&lt;p&gt;输入电压先过保险丝、TVS 防浪涌静电，再接降压芯片转 3.3V/5V。&lt;/p&gt;
+&lt;p&gt;每个电源输出端并一大一小电容（10uF+0.1uF）滤波，靠近芯片供电脚放置。&lt;/p&gt;
+&lt;p&gt;模拟电源和数字电源分开，必要时用磁珠隔开，减少干扰。&lt;/p&gt;
+&lt;h3 id=&#34;2主控单片机最小系统&#34;&gt;（2）主控单片机最小系统
+&lt;/h3&gt;&lt;p&gt;晶振电路靠近芯片晶振引脚，匹配电容不能省；复位电路上拉电阻 + 电容。&lt;/p&gt;
+&lt;p&gt;BOOT 启动脚按需求接高低电平；下载调试口预留，电阻按手册加上。&lt;/p&gt;
+&lt;p&gt;单片机每个 VDD 旁边必须放 0.1uF 去耦电容，这步漏了容易跑飞死机。&lt;/p&gt;
+&lt;h3 id=&#34;3外设电路&#34;&gt;（3）外设电路
+&lt;/h3&gt;&lt;p&gt;LED 灯串限流电阻，不然直接烧灯；按键接上拉 / 下拉电阻，防止引脚浮空乱跳。&lt;/p&gt;
+&lt;p&gt;I2C、SPI、UART 通信引脚，需要上拉电阻就加上；串口加电阻限流保护 IO 口。&lt;/p&gt;
+&lt;p&gt;电机、继电器这类大功率负载，不能直接单片机驱动，加三极管 / 驱动芯片隔离，避免烧坏主控。&lt;/p&gt;
+&lt;h3 id=&#34;4接口部分&#34;&gt;（4）接口部分
+&lt;/h3&gt;&lt;p&gt;排针、USB、网口、电池座子标注清楚引脚定义，电源、地、信号分开。&lt;/p&gt;
+&lt;p&gt;对外接口全部加 ESD 保护管，防止插拔静电打坏芯片。&lt;/p&gt;
+&lt;h2 id=&#34;4-网络标号连线不用飞一堆线&#34;&gt;4. 网络标号连线，不用飞一堆线
+&lt;/h2&gt;&lt;p&gt;相同电压、相同信号只用网络标号标注，不用导线拉的到处都是，图纸干净好检查。&lt;/p&gt;
+&lt;p&gt;GND 地统一网络，所有器件地全部连到 GND。&lt;/p&gt;
+&lt;p&gt;电源网络单独标：3V3、5V、VBAT，一眼分清电压。&lt;/p&gt;
+&lt;h2 id=&#34;5-标注参数位号方便后期制版焊接&#34;&gt;5. 标注参数、位号，方便后期制版焊接
+&lt;/h2&gt;&lt;p&gt;每个电阻电容标阻值容值，芯片标型号；R1、C1、U1 位号按模块顺序排，不乱跳号。&lt;/p&gt;
+&lt;p&gt;图纸角落放表格，写清楚板子名称、版本、日期，方便迭代修改。&lt;/p&gt;
+&lt;h2 id=&#34;6-电气规则检查erc找低级错误&#34;&gt;6. 电气规则检查（ERC），找低级错误
+&lt;/h2&gt;&lt;p&gt;软件一键检测：引脚短路、浮空输入、电源接反、引脚未连接、重复网络。&lt;/p&gt;
+&lt;p&gt;常见坑：电源和地短接、IO 口没限流、晶振电容漏加、复位引脚悬空，全部改完再往下走。&lt;/p&gt;
+&lt;h2 id=&#34;7-复盘查漏优化电路&#34;&gt;7. 复盘查漏，优化电路
+&lt;/h2&gt;&lt;p&gt;看有没有多余元器件，能省就省降低成本；大功率回路走线预留宽一点。&lt;/p&gt;
+&lt;p&gt;高频信号、模拟信号远离电源芯片、电感，减少干扰；预留测试点，后期调试方便测电压波形。&lt;/p&gt;
+&lt;p&gt;确认所有芯片供电、地、信号完整，没有遗漏引脚，原理图才算完工，再转 PCB。&lt;/p&gt;
 &lt;p&gt;原理图如下&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://Ryzzi.github.io/images/image-20260716104927934.png&#34;
 	
@@ -100,7 +513,53 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
 	
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;独立绘制四层电路板&lt;/p&gt;
+&lt;h1 id=&#34;pcb绘制&#34;&gt;PCB绘制
+&lt;/h1&gt;&lt;h2 id=&#34;一画完原理图先干两件事不然-pcb-全报错&#34;&gt;一、画完原理图先干两件事，不然 PCB 全报错
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;每个元件绑定封装，电阻 0805、单片机 QFP、排针选对应焊盘，选错焊不上&lt;/li&gt;
+&lt;li&gt;跑 ERC 电气检查，短路、浮空引脚、缺电源全部修干净，有报错别进 PCB&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;二原理图导入-pcb&#34;&gt;二、原理图导入 PCB
+&lt;/h2&gt;&lt;p&gt;点顶部【设计】→更新原理图到 PCB，弹出来变更点应用，所有元件会堆在框外，一堆飞线就是连接关系。&lt;/p&gt;
+&lt;p&gt;先画紫色机械层板框，板子多大就画多大，所有元件必须放框里面，超出做不出来。&lt;/p&gt;
+&lt;h2 id=&#34;三布局先摆大件再摆小件&#34;&gt;三、布局（先摆大件，再摆小件）
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;电源芯片放输入接口旁边，减少大电流长线；&lt;/li&gt;
+&lt;li&gt;主控单片机放中间，外设围着它摆：晶振紧贴芯片引脚，去耦电容贴供电脚；&lt;/li&gt;
+&lt;li&gt;接口（USB、排针、电池）全放板子边缘，方便插线；&lt;/li&gt;
+&lt;li&gt;功率器件（继电器、电机驱动）和温感、蓝牙天线分开，减少干扰；&lt;/li&gt;
+&lt;li&gt;同模块元件放一块，电源、主控、蓝牙、接口分区摆，不乱堆。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;四布线规矩新手少踩坑&#34;&gt;四、布线规矩（新手少踩坑）
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;走线只走 45 度拐角，别直角、锐角；&lt;/li&gt;
+&lt;li&gt;电流越大线越粗：GND、5V 至少 0.5mm，3.3V 0.3mm，普通信号 0.2mm；&lt;/li&gt;
+&lt;li&gt;晶振走线短、包地，远离电感、电源芯片；&lt;/li&gt;
+&lt;li&gt;蓝牙 / WiFi 天线区域不能铺铜，不能走线；&lt;/li&gt;
+&lt;li&gt;信号线尽量不跨分割地，模拟地数字地用磁珠分开；&lt;/li&gt;
+&lt;li&gt;过孔别打在焊盘正中间，功率回路多打几个过孔分流。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;五铺铜--泪滴必做&#34;&gt;五、铺铜 + 泪滴（必做）
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;全部信号线布完再铺 GND 铜，顶层底层都铺，网络选 GND；&lt;/li&gt;
+&lt;li&gt;铺铜设置死铜移除，孤岛铜删掉；&lt;/li&gt;
+&lt;li&gt;全部焊盘加泪滴，防止焊接拉扯断线；&lt;/li&gt;
+&lt;li&gt;电源网络如果电流大，可以单独铺一小块铜供电。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;六丝印标注&#34;&gt;六、丝印标注
+&lt;/h2&gt;&lt;p&gt;顶层丝印层写字：板子名字、版本、接口引脚定义、LED 功能；&lt;/p&gt;
+&lt;p&gt;位号 R1/C1/U1 别盖住焊盘，不然贴片看不清；&lt;/p&gt;
+&lt;p&gt;字体别太小，嘉立创最小推荐 0.8mm 高，太小印不出来。&lt;/p&gt;
+&lt;h2 id=&#34;七drc-规则检查重中之重&#34;&gt;七、DRC 规则检查（重中之重）
+&lt;/h2&gt;&lt;p&gt;跑完 DRC，所有报错全部处理：&lt;/p&gt;
+&lt;p&gt;走线间距不够、线宽太小、孔离板边太近、短路、未连接网络、丝印压焊盘，一个漏不下单容易报废。&lt;/p&gt;
+&lt;h2 id=&#34;八导出文件准备打样--贴片&#34;&gt;八、导出文件准备打样 / 贴片
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;导出 Gerber 制造文件（下单必须这个，别直接传 PCB 源文件）；&lt;/li&gt;
+&lt;li&gt;导出 BOM 物料表，贴片用；&lt;/li&gt;
+&lt;li&gt;导出坐标文件，SMT 机器贴元件用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;四层PCB&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://Ryzzi.github.io/images/image-20260716104941608.png&#34;
 	
 	
@@ -111,6 +570,106 @@ GPIO_ResetBits(GPIOA, GPIO_Pin_0);
 	
 	
 &gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>简述常见通信协议</title>
+        <link>https://Ryzzi.github.io/p/%E7%AE%80%E8%BF%B0%E5%B8%B8%E8%A7%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</link>
+        <pubDate>Mon, 12 Jan 2026 14:54:22 +0800</pubDate>
+        
+        <guid>https://Ryzzi.github.io/p/%E7%AE%80%E8%BF%B0%E5%B8%B8%E8%A7%81%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</guid>
+        <description>&lt;h2 id=&#34;一tcp传输控制协议网络层之上传输层协议&#34;&gt;一、TCP（传输控制协议，网络层之上传输层协议）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;面向连接&lt;/strong&gt;：通信前三次握手建立连接，结束四次挥手断开；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可靠传输&lt;/strong&gt;：序号、ACK 应答、丢包重传、流量控制、拥塞控制；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有序传输&lt;/strong&gt;：数据包按发送顺序交付，无乱序；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;头部开销大&lt;/strong&gt;，实时性较差。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;底层载体&#34;&gt;底层载体
+&lt;/h3&gt;&lt;p&gt;基于 IP（IPv4/IPv6），跑以太网 / Wi‑Fi/4G/5G 等网络。&lt;/p&gt;
+&lt;h3 id=&#34;典型场景&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;网页 HTTPS、SSH 远程登录、FTP 文件传输、数据库、微信文字、MQTT。&lt;/p&gt;
+&lt;h2 id=&#34;二udp用户数据报协议&#34;&gt;二、UDP（用户数据报协议）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性-1&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无连接&lt;/strong&gt;：无需握手，直接发数据包；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可靠&lt;/strong&gt;：无应答、无重传，丢包不处理；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;低延迟、头部极简&lt;/strong&gt;，开销小；&lt;/li&gt;
+&lt;li&gt;支持广播、组播。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;底层载体-1&#34;&gt;底层载体
+&lt;/h3&gt;&lt;p&gt;同样基于 IP。&lt;/p&gt;
+&lt;h3 id=&#34;典型场景-1&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;直播、视频通话、网络游戏、DNS 域名解析、语音通话、RTP 音视频。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三uart通用异步收发串口板间--硬件低速有线&#34;&gt;三、UART（通用异步收发串口，板间 / 硬件低速有线）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性-2&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;异步串行，&lt;strong&gt;点对点一对一通信&lt;/strong&gt;，只能 2 个设备互通；&lt;/li&gt;
+&lt;li&gt;两根线：TX 发送、RX 接收，GND 共地；&lt;/li&gt;
+&lt;li&gt;无时钟线，依靠双方约定波特率同步；&lt;/li&gt;
+&lt;li&gt;速率低、抗干扰弱，距离短；扩展 RS485 后可多设备、远距离。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;典型场景-2&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;单片机调试串口、蓝牙模块透传、GPS 模块、老设备控制台。&lt;/p&gt;
+&lt;h2 id=&#34;四i2c集成电路间总线板内短距离通信&#34;&gt;四、I2C（集成电路间总线，板内短距离通信）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性-3&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;同步串行，&lt;strong&gt;多设备挂载同一总线&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;仅两根线：SCL 时钟线、SDA 数据线；&lt;/li&gt;
+&lt;li&gt;设备靠唯一 7/10 位地址区分，主从架构；&lt;/li&gt;
+&lt;li&gt;速率不高，仅适合电路板内部短距。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;典型场景-3&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;温湿度传感器、OLED/LCD 屏幕、EEPROM 存储、ADC 芯片。&lt;/p&gt;
+&lt;h2 id=&#34;五spi串行外设接口高速板内通信&#34;&gt;五、SPI（串行外设接口，高速板内通信）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性-4&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;同步高速串行，全双工；&lt;/li&gt;
+&lt;li&gt;四线：SCK 时钟、MOSI 主机发、MISO 从机发、CS 片选（每个从设备独立片选）；&lt;/li&gt;
+&lt;li&gt;无地址机制，靠片选区分设备；传输速度远高于 I2C；&lt;/li&gt;
+&lt;li&gt;抗干扰一般，仅限 PCB 板内。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;典型场景-4&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;Flash 存储、LCD 屏幕、射频模块、ADC、高速外设。&lt;/p&gt;
+&lt;h2 id=&#34;六can--can-fd控制器局域网车载--工业有线总线&#34;&gt;六、CAN / CAN FD（控制器局域网，车载 / 工业有线总线）
+&lt;/h2&gt;&lt;h3 id=&#34;核心特性-5&#34;&gt;核心特性
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;差分双线传输（CAN_H / CAN_L），极强抗电磁干扰；&lt;/li&gt;
+&lt;li&gt;多设备总线式组网，无主从，消息广播；&lt;/li&gt;
+&lt;li&gt;自带错误检测、自动重发、故障设备自动脱离总线；&lt;/li&gt;
+&lt;li&gt;CAN FD 相比传统 CAN 支持更大数据包、更高速率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;典型场景-5&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;汽车整车总线（发动机、刹车、仪表）、工业机器人、工程机械。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;七zigbee-基于-ieee-802154-标准无线协议&#34;&gt;七、ZigBee 基于 IEEE 802.15.4 标准无线协议
+&lt;/h2&gt;&lt;h3 id=&#34;1-ieee-802154-底层标准&#34;&gt;1. IEEE 802.15.4 底层标准
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理层 + MAC 层规范，&lt;strong&gt;低速、低功耗、短距离无线&lt;/strong&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;工作频段：2.4GHz（全球通用）、868MHz/915MHz；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;低发射功率，电池设备可续航数月～数年；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持设备寻址、信道访问、休眠省电机制；&lt;/p&gt;
+&lt;p&gt;仅定义底层无线收发，无上层组网逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-zigbee&#34;&gt;2. ZigBee
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;支持 Mesh 自组网：协调器、路由器、终端设备三级拓扑；&lt;/li&gt;
+&lt;li&gt;多设备大量节点组网（几十上百个传感器）；&lt;/li&gt;
+&lt;li&gt;低功耗、低成本、低速率；&lt;/li&gt;
+&lt;li&gt;传输距离几十米，穿墙一般。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;典型场景-6&#34;&gt;典型场景
+&lt;/h3&gt;&lt;p&gt;智能家居传感器（门窗、人体红外、温湿度）、工业无线采集、灯光开关、楼宇自动化&lt;/p&gt;
 </description>
         </item>
         <item>
